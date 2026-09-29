@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>لوحة الطلبات | Wishes</title>
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="./images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="container admin-header-inner">
+    <a class="admin-brand" href="./">
+      <img src="./images/wishes-logo.png" alt="Wishes" />
+      <span>لوحة الطلبات</span>
+    </a>
+    <div class="admin-header-actions" hidden>
+      <button type="button" class="btn btn-ghost btn-small" id="admin-refresh">تحديث</button>
+      <button type="button" class="btn btn-ghost btn-small" id="admin-logout">تسجيل الخروج</button>
+    </div>
+  </div>
+</header>
+
+<main class="container admin-main">
+  <!-- Login, dashboard and messages are rendered by src/admin.js -->
+  <div id="admin-root"></div>
+</main>
+
+<script type="module" src="./src/admin.js"></script>
+</body>
+</html>
