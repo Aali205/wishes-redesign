@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>روتين البشرة | Wishes</title>
+  <meta name="description" content="نصيحة Wishes: روتين بشرة بسيط بثلاث خطوات — نظّفي، رطّبي، احمي." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="routine">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <!-- Dusk page head: drifting wish seeds (src/dandelion.js, drift mode) -->
+  <section class="page-head" data-drift>
+    <canvas class="drift-canvas" aria-hidden="true"></canvas>
+    <div class="wrap page-head-inner">
+      <p class="kicker">نصيحة Wishes</p>
+      <h1 class="display" data-split>روتين بشرة بسيط بثلاث خطوات</h1>
+    </div>
+  </section>
+
+  <section class="section routine" id="routine" aria-label="خطوات الروتين">
+    <div class="wrap routine-inner">
+      <!-- The stem fills and a seed travels down it as you scroll (src/motion.js) -->
+      <div class="stem" aria-hidden="true"><span class="stem-fill"></span><svg class="stem-seed" viewBox="0 0 40 80"><use href="#i-seed" /></svg></div>
+      <ol class="steps">
+      <li class="step reveal" style="--i:0">
+        <span class="step-num" aria-hidden="true">١</span>
+        <svg class="step-art" aria-hidden="true"><use href="#i-toner" /></svg>
+        <h2 class="step-name">نظّفي</h2>
+        <p>ابدئي بغسول لطيف يناسب نوع بشرتك صباحاً ومساءً لإزالة الشوائب وبقايا المكياج.</p>
+      </li>
+      <li class="step reveal" style="--i:1">
+        <span class="step-num" aria-hidden="true">٢</span>
+        <svg class="step-art" aria-hidden="true"><use href="#i-cream" /></svg>
+        <h2 class="step-name">رطّبي</h2>
+        <p>سيروم ثم مرطّب خفيف يحافظ على نضارة بشرتك ويجهّزها للمكياج.</p>
+      </li>
+      <li class="step reveal" style="--i:2">
+        <span class="step-num" aria-hidden="true">٣</span>
+        <svg class="step-art" aria-hidden="true"><use href="#i-sunscreen" /></svg>
+        <h2 class="step-name">احمي</h2>
+        <p>واقي الشمس هو سرّ البشرة الشابة — لا تستغني عنه حتى في الأيام الغائمة.</p>
+      </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

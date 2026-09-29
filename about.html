@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | Wishes</title>
+  <meta name="description" content="Wishes… حيث تتحقق الأمنيات. منتجات تجميل أصلية وموثوقة في سوريا." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="about" data-tone="dusk">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <!-- Dusk page head: drifting wish seeds (src/dandelion.js, drift mode) -->
+  <section class="page-head" data-drift>
+    <canvas class="drift-canvas" aria-hidden="true"></canvas>
+    <div class="wrap page-head-inner">
+      <p class="kicker">من نحن</p>
+      <h1 class="display" data-split>Wishes… حيث تتحقق الأمنيات</h1>
+    </div>
+  </section>
+
+  <section class="section about" id="about" aria-label="قصتنا">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <!-- Words light up one by one as this paragraph scrolls through (src/motion.js) -->
+        <p class="statement" data-light>
+          بدأت Wishes من شغف بسيط: أن تجد كل فتاة في سوريا منتجات تجميل أصلية وموثوقة بسعر مناسب،
+          مع نصيحة صادقة تساعدها تختار الأنسب لها. نؤمن أن الجمال ثقة، وأن كل امرأة تستحق أن تدلّل نفسها.
+        </p>
+        <ul class="features">
+          <li class="reveal" style="--i:0"><strong>شراكات حصرية</strong><span>الوكيل الوحيد في سوريا لـ Lashango و Aliona Cosmetics و IBRAQ.</span></li>
+          <li class="reveal" style="--i:1"><strong>منتجات أصلية</strong><span>نتعامل مع مصادر موثوقة فقط.</span></li>
+          <li class="reveal" style="--i:2"><strong>نصيحة شخصية</strong><span>راسلينا ونساعدك تختاري حسب نوع بشرتك.</span></li>
+          <li class="reveal" style="--i:3"><strong>تغليف مميّز</strong><span>كل طلب يصلك مغلّفاً كهدية.</span></li>
+        </ul>
+      </div>
+      <div class="about-visual reveal" aria-hidden="true">
+        <div class="about-window"><img src="/images/wishes-logo.png" alt="" width="585" height="298" /></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

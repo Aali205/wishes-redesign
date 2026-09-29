@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المنتجات | Wishes</title>
+  <meta name="description" content="منتجات Wishes: عطور، عناية بالجسم والشعر ومكياج. أضيفي إلى السلة واطلبي بسهولة." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="products">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <!-- Dusk page head: drifting wish seeds (src/dandelion.js, drift mode) -->
+  <section class="page-head" data-drift>
+    <canvas class="drift-canvas" aria-hidden="true"></canvas>
+    <div class="wrap page-head-inner">
+      <p class="kicker">الأكثر طلباً</p>
+      <h1 class="display" data-split>منتجات تحبّينها</h1>
+      <p class="page-sub">اختاري الكمية وأضيفي ما يعجبك إلى السلة، ثم أرسلي طلبك عبر إنستغرام.</p>
+    </div>
+  </section>
+
+  <section class="section" id="products" aria-label="المنتجات">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="تصفية المنتجات">
+        <button type="button" class="chip is-active" data-filter="all">الكل</button>
+        <button type="button" class="chip" data-filter="fragrance">عطور</button>
+        <button type="button" class="chip" data-filter="body">عناية بالجسم</button>
+        <button type="button" class="chip" data-filter="hair">عناية بالشعر</button>
+        <button type="button" class="chip" data-filter="makeup">مكياج</button>
+      </div>
+      <div class="products" id="product-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

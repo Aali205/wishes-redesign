@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصلي معنا | Wishes</title>
+  <meta name="description" content="تواصلي مع Wishes عبر إنستغرام لأي استفسار أو طلب." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="contact" data-tone="dusk">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <section class="contact-hero" id="contact" aria-labelledby="contact-title">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <p class="kicker">تواصلي معنا</p>
+        <h1 class="display" id="contact-title" data-split>أمنيتك القادمة بانتظارك</h1>
+        <p class="page-sub">
+          تابعي أحدث المنتجات والعروض على إنستغرام، وراسلينا لأي استفسار أو طلب — نرد عليكِ بأسرع وقت.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="https://www.instagram.com/wishes.sy/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>
+            @wishes.sy
+          </a>
+          <a class="btn btn-line" href="https://ig.me/m/wishes.sy" target="_blank" rel="noopener">أرسلي رسالة مباشرة</a>
+        </div>
+      </div>
+      <div class="hero-stage contact-stage" aria-hidden="true"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

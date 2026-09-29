@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishes | ويشز — مكياج وعناية بالبشرة</title>
+  <meta name="description" content="Wishes — متجر مكياج ومنتجات عناية بالبشرة في سوريا. منتجات أصلية، أسعار مناسبة، وطلب سهل عبر إنستغرام." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- First-visit intro (src/motion.js). Hidden by CSS after 3s even if JS fails. -->
+<div class="preloader" aria-hidden="true">
+  <img src="/images/wishes-logo.png" alt="" width="585" height="298" class="preloader-logo" />
+  <svg class="preloader-seed" viewBox="0 0 40 80"><use href="#i-seed" /></svg>
+</div>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <!-- Hero: the signature dandelion ("make a wish"). Canvas drawn by src/dandelion.js -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker hero-kicker" data-intro>الوكيل الحصري لـ Lashango و Aliona و IBRAQ في سوريا</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span data-intro>جمالك يبدأ</span></span>
+          <span class="line"><span data-intro>بأمنية</span></span>
+        </h1>
+        <p class="hero-lead" data-intro>
+          في <strong>Wishes</strong> نختار لكِ أفضل منتجات المكياج والعناية بالبشرة بعناية،
+          لتحصلي على إطلالة تشبهك وبشرة صحية ومشرقة كل يوم.
+        </p>
+        <div class="hero-actions" data-intro>
+          <a class="btn btn-gold" href="./products.html">تسوّقي الآن</a>
+          <a class="btn btn-line" href="https://ig.me/m/wishes.sy" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>
+            اطلبي عبر إنستغرام
+          </a>
+        </div>
+      </div>
+      <div class="hero-stage" data-intro>
+        <div class="wish-panel">
+          <button type="button" class="wish-btn" id="wish-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-seed" /></svg>
+            انفخي أمنية
+          </button>
+          <p class="wish-count" aria-live="polite"><span id="wish-count">0</span> أمنية طارت</p>
+        </div>
+        <p class="wish-hint">مرّري المؤشر أو إصبعك فوق الزهرة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promises: the four reasons to shop at Wishes -->
+  <section class="promises" aria-label="لماذا Wishes">
+    <ul class="wrap promise-list">
+      <li class="reveal" style="--i:0"><strong>حصرياً</strong> في سوريا</li>
+      <li class="reveal" style="--i:1"><strong>100%</strong> منتجات أصلية</li>
+      <li class="reveal" style="--i:2"><strong>استشارة</strong> مجانية لبشرتك</li>
+      <li class="reveal" style="--i:3"><strong>توصيل</strong> لباب البيت</li>
+    </ul>
+  </section>
+
+  <!-- Brand ribbon -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>مكياج</span><span>عناية بالبشرة</span><span>Wishes</span><span>Lashango</span><span>Aliona</span><span>IBRAQ</span><span>واقي شمس</span>
+      <span>مكياج</span><span>عناية بالبشرة</span><span>Wishes</span><span>Lashango</span><span>Aliona</span><span>IBRAQ</span><span>واقي شمس</span>
+    </div>
+  </div>
+
+  <!-- Featured products: pinned; each screen of scroll slides the next product in (src/main.js). -->
+  <section class="showcase" id="featured" aria-roledescription="carousel" aria-label="منتجات تحبّينها">
+    <div class="showcase-pin">
+      <div class="wrap showcase-head">
+        <div>
+          <p class="kicker">الأكثر طلباً</p>
+          <h2 class="display-2">منتجات تحبّينها</h2>
+        </div>
+        <div class="showcase-controls">
+          <span class="showcase-counter" aria-live="polite"><strong id="showcase-current">01</strong> / <span id="showcase-total">01</span></span>
+          <button type="button" class="showcase-arrow" data-showcase="prev" aria-label="المنتج السابق">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+          </button>
+          <button type="button" class="showcase-arrow" data-showcase="next" aria-label="المنتج التالي">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="showcase-viewport">
+        <div class="showcase-track" id="showcase-track"></div>
+      </div>
+
+      <div class="wrap showcase-foot">
+        <div class="showcase-progress" aria-hidden="true"><span id="showcase-bar"></span></div>
+        <div class="showcase-dots" id="showcase-dots"></div>
+        <a class="showcase-all" href="./products.html">عرض كل المنتجات</a>
+      </div>
+    </div>
+    <div class="showcase-snaps" id="showcase-snaps" aria-hidden="true"></div>
+  </section>
+
+  <!-- Instagram CTA -->
+  <section class="wish-cta" id="contact" data-drift>
+    <canvas class="drift-canvas" aria-hidden="true"></canvas>
+    <div class="wrap wish-cta-inner">
+      <p class="kicker">تواصلي معنا</p>
+      <h2 class="display" data-split>أمنيتك القادمة بانتظارك</h2>
+      <p class="page-sub">
+        تابعي أحدث المنتجات والعروض على إنستغرام، وراسلينا لأي استفسار أو طلب — نرد عليكِ بأسرع وقت.
+      </p>
+      <div class="cta-actions">
+        <a class="btn btn-gold" href="https://www.instagram.com/wishes.sy/" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>
+          @wishes.sy
+        </a>
+        <a class="btn btn-line" href="https://ig.me/m/wishes.sy" target="_blank" rel="noopener">أرسلي رسالة مباشرة</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

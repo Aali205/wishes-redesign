@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الأقسام | Wishes</title>
+  <meta name="description" content="تسوّقي حسب القسم: العطور، العناية بالجسم، العناية بالشعر والمكياج." />
+  <meta name="theme-color" content="#1F1430" />
+  <link rel="icon" type="image/png" href="/images/wishes-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Aref Ruqaa: Ruqaa calligraphy for display (handwritten, like a wish note).
+       Readex Pro: clean Arabic/Latin text face. Falls back to Windows Arabic faces offline. -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Readex+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    // Motion is opt-in: only when JS runs and the visitor allows motion.
+    // Safety net: if the app never signals "ready", show the hero anyway.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+      setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 4500);
+    }
+  </script>
+</head>
+<body data-page="categories">
+<a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+<!-- Icon sprite, injected before the markup below is parsed. -->
+<script src="/sprite.js"></script>
+
+<!-- Header, footer and floating button are rendered by src/layout.js -->
+<header class="site-header" id="top"></header>
+
+<main id="main" tabindex="-1">
+  <!-- Dusk page head: drifting wish seeds (src/dandelion.js, drift mode) -->
+  <section class="page-head" data-drift>
+    <canvas class="drift-canvas" aria-hidden="true"></canvas>
+    <div class="wrap page-head-inner">
+      <p class="kicker">تسوّقي حسب القسم</p>
+      <h1 class="display" data-split>كل ما تتمنّينه في مكان واحد</h1>
+    </div>
+  </section>
+
+  <section class="section" id="categories" aria-label="الأقسام">
+    <div class="wrap categories">
+      <a href="./products.html?cat=fragrance" class="category reveal">
+        <span class="category-window"><img src="/images/products/kayali-sweet-obsessions.jpg" alt="سيت عطور كايالي Sweet Obsessions" loading="lazy" decoding="async" /></span>
+        <span class="category-name">العطور</span>
+        <span class="category-text">بادي مست، سيتات عطور ودهون فاخرة من أشهر الماركات العالمية.</span>
+      </a>
+      <a href="./products.html?cat=body" class="category reveal">
+        <span class="category-window"><img src="/images/products/body-butter-bodyshop.jpg" alt="زبدة الجسم من ذا بودي شوب" loading="lazy" decoding="async" /></span>
+        <span class="category-name">العناية بالجسم</span>
+        <span class="category-text">زبدات جسم ومرطّبات بتركيبات غنية تمنح ترطيباً يدوم طويلاً.</span>
+      </a>
+      <a href="./products.html?cat=hair" class="category reveal">
+        <span class="category-window"><img src="/images/categories/hair-kerastase.jpg" alt="سيت كيراستاس جينيسيس للعناية بالشعر" style="object-position: center 22%" loading="lazy" decoding="async" /></span>
+        <span class="category-name">العناية بالشعر</span>
+        <span class="category-text">سكراب وعناية بفروة الرأس لشعر منعش وصحي من الجذور.</span>
+      </a>
+      <a href="./products.html?cat=makeup" class="category reveal">
+        <span class="category-window"><img src="/images/products/fenty-beauty-set.jpg" alt="سيت مكياج فينتي بيوتي" loading="lazy" decoding="async" /></span>
+        <span class="category-name">المكياج</span>
+        <span class="category-text">هايلايتر، ماسكارا وغلوس بسيتات جاهزة لإطلالة كاملة.</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
